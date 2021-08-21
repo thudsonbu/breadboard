@@ -1,0 +1,26 @@
+{
+  "name": "integrations",
+  "version": "1.0.0",
+  "description": "Integrations for apps.",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thudsonbu/integrations.git"
+  },
+  "keywords": [
+    "habitica",
+    "notion"
+  ],
+  "author": "Thomas Hudson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thudsonbu/integrations/issues"
+  },
+  "homepage": "https://github.com/thudsonbu/integrations#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
