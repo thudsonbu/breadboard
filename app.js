@@ -1,8 +1,9 @@
-const client = require('./clients/habitica');
+const habitica = require('./clients/habitica');
+const todoist  = require('./clients/todoist');
 
 async function main() {
 
-  const res = await client.get(
+  const habiticaTasks = await habitica.get(
     'tasks/user',
     {
       params: {
@@ -11,7 +12,12 @@ async function main() {
     }
   );
 
-  console.log( res );
+  const todoistProjects = await todoist.get(
+    'projects'
+  );
+
+  console.log( habiticaTasks.data );
+  console.log( todoistProjects.data );
 }
 
 main();
