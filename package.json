@@ -4,7 +4,7 @@
   "description": "Integrations for apps.",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,10 @@
     "@hapi/hapi": "^20.2.1",
     "@starryinternet/jobi": "^1.2.0",
     "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "@starryinternet/eslint-config-starry": "^10.4.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
   }
 }

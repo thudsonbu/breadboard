@@ -1,7 +1,6 @@
-const Hapi = require('@hapi/hapi');
-const logger = require('@starryinternet/jobi');
-const habitica = require('./lib/clients/habitica');
-
+const Hapi     = require('@hapi/hapi');
+const logger   = require('@starryinternet/jobi');
+const habitica = require('./lib/resources/habitica');
 
 const init = async() => {
   const port = process.env.PORT || 3000;
@@ -13,9 +12,14 @@ const init = async() => {
 
   server.route({
     method: 'POST',
-    path: '/todos',
-    handler: (req, h) => {
+    path: '/habitica/relay',
+    handler: async ( req, h ) => {
+      logger.debug( 'request to /habitica/relay' );
 
+      await habitica.relayItem({
+        text: 'todoist text',
+        difficulty: 'todoist difficulty'
+      });
     }
   });
 
