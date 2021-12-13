@@ -8,7 +8,7 @@ async function main() {
       type: 'todo',
     });
   } catch (err) {
-    logger.error( err.message )
+    logger.error( err.response )
   }
 }
 
