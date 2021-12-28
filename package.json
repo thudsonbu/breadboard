@@ -1,10 +1,11 @@
 {
   "name": "integrations",
   "version": "1.0.0",
-  "description": "Integrations for apps.",
+  "description": "Integration for Todoist and Habitica.",
   "main": "app.js",
   "scripts": {
-    "test": "mocha --recursive",
+    "start": "NODE_DEBUG=info node index.js",
+    "test": "NODE_ENV=test mocha --recursive",
     "coverage": "nyc npm run test"
   },
   "repository": {
@@ -13,6 +14,7 @@
   },
   "keywords": [
     "habitica",
+    "todoist",
     "notion"
   ],
   "author": "Thomas Hudson",

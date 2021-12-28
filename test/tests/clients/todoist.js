@@ -3,6 +3,7 @@ const { assert } = require('chai');
 const client = require('../../../lib/clients/todoist');
 
 describe( 'lib/clients/todoist', () => {
+
   it( 'should return a configured axios client', () => {
     const todoist = client.create('token');
 
@@ -15,4 +16,5 @@ describe( 'lib/clients/todoist', () => {
       'Bearer token'
     );
   });
+
 });
