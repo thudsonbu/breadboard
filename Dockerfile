@@ -6,6 +6,9 @@ COPY . .
 
 RUN npm install --production
 
-EXPOSE 8080
+EXPOSE 80
 
-CMD [ "node", "./lib/app.js" ]
+ENV NODE_DEBUG 'trace'
+ENV NODE_ENV 'production'
+
+CMD [ "node", "index.js" ]
