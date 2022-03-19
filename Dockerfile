@@ -6,9 +6,8 @@ COPY . .
 
 RUN npm install --production
 
-EXPOSE 80
+EXPOSE 8080
 
 ENV NODE_DEBUG 'trace'
-ENV NODE_ENV 'production'
 
 CMD [ "node", "index.js" ]
