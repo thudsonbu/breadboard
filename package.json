@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "NODE_DEBUG=info node index.js",
-    "test": "NODE_ENV=test mocha --recursive",
+    "mocha": "NODE_ENV=test mocha --recursive",
+    "nyc": "nyc npm run mocha",
     "coverage": "nyc npm run test"
   },
   "repository": {
