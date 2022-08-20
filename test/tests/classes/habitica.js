@@ -7,7 +7,7 @@ const module_path = '../../../lib/classes/habitica';
 
 describe( 'lib/classes/habitica', () => {
 
-  describe( '#constructor', () => {
+  describe( 'constructor', () => {
 
     it( 'should create an instance of Habitica', () => {
       const Habitica = require( module_path );
