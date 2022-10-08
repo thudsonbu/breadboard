@@ -27,7 +27,7 @@
   "dependencies": {
     "@hapi/hapi": "^20.2.2",
     "@starryinternet/jobi": "^1.2.0",
-    "axios": "^0.27.2"
+    "axios": "^1.1.2"
   },
   "devDependencies": {
     "@starryinternet/eslint-config-starry": "^10.4.0",
