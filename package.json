@@ -48,7 +48,7 @@
     "@types/rewire": "^2.5.28",
     "@types/sinon": "^10.0.13",
     "chai": "^4.3.6",
-    "mocha": "^10.0.0",
+    "mocha": "^10.1.0",
     "nock": "^13.2.9",
     "nodemon": "^2.0.20",
     "npm-run-all": "^4.1.5",
