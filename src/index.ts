@@ -1,3 +1,3 @@
-import { init, start } from './app';
+import { start } from "./app";
 
-init().then(() => start());
+start();

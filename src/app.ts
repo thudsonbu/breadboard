@@ -1,9 +1,10 @@
 import { Server } from "@hapi/hapi";
 import resources from "./resources";
+import log from "./utils/log";
 
 export let server: Server;
 
-export const init = async (): Promise<Server> => {
+export const start = async (): Promise<Server> => {
   const port = process.env.PORT || 3000;
 
   server = new Server({
@@ -15,13 +16,9 @@ export const init = async (): Promise<Server> => {
 
   await server.start();
 
+  log(`Integrations started on port ${port}`);
+
   return server;
-};
-
-export const start = async function (): Promise<void> {
-  console.log(`Listening on ${server.settings.host}:${server.settings.port}`);
-
-  return server.start();
 };
 
 process.on("unhandledRejection", (err) => {
@@ -29,3 +26,8 @@ process.on("unhandledRejection", (err) => {
   console.error(err);
   process.exit(1);
 });
+
+export default {
+  start,
+  server,
+};

@@ -1,11 +1,12 @@
-import log from "@starryinternet/jobi";
+import log from "../utils/log";
+import { Request } from "@hapi/hapi";
 
 export default [
   {
     method: "POST",
     path: "/habitica/webhook",
-    handler(req, h) {
-      log.info("received habitica webhook");
+    handler(request: Request, h) {
+      log("received habitica webhook");
 
       return h.response("hello world");
     },

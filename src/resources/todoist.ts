@@ -1,11 +1,12 @@
-import log from "@starryinternet/jobi";
+import { Request } from "@hapi/hapi";
+import log from "../utils/log";
 
 export default [
   {
     method: "POST",
     path: "/todoist/webhook",
-    handler(req, h) {
-      log.info("received webhook");
+    handler(request: Request, h) {
+      log("received webhook");
 
       return h.response("hello world");
     },

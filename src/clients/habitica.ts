@@ -1,21 +1,29 @@
 import axios from "axios";
 import { Axios } from "axios";
+import config from "../private/habitica_config";
+
+// Cached client instance.
+let client: Axios;
 
 /**
- * Create a new axios instance configured for habitica api
- * @param userId - habitica user_id
- * @param apiKey - habitica api_key
+ * Memoized create function for an axios based habitica client
  */
-function create(userId: string, apiKey: string): Axios {
-  return axios.create({
+export function getClient() {
+  if (client) {
+    return client;
+  }
+
+  client = axios.create({
     baseURL: "https://habitica.com/api/v3",
     headers: {
-      "x-api-user": userId,
-      "x-api-key": apiKey,
+      "x-api-user": config.USER_ID,
+      "x-api-key": config.API_KEY,
     },
   });
+
+  return client;
 }
 
 export default {
-  create,
+  getClient,
 };

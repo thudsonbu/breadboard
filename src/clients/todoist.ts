@@ -1,16 +1,28 @@
 import axios from "axios";
 import { Axios } from "axios";
+import config from "../private/todoist_config";
+
+// Cached client instance
+let client: Axios;
 
 /**
- * Create a new axios instance configured for todoist rest api
- * @param restApiToken - JWT without Bearer prefix
- * @returns - new instance
+ * Memoized create function for an axios based todoist rest client
  */
-export function createRest(restApiToken: string): Axios {
-  return axios.create({
+export function getClient() {
+  if (client) {
+    return client;
+  }
+
+  client = axios.create({
     baseURL: "https://api.todoist.com/rest/v1",
     headers: {
-      Authorization: "Bearer " + restApiToken,
+      Authorization: "Bearer " + config.REST_API_TOKEN,
     },
   });
+
+  return client;
 }
+
+export default {
+  getClient,
+};
