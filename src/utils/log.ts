@@ -1,5 +1,6 @@
 // TODO use something better for logging
-
 export default function log(msg: any) {
-  console.log(JSON.stringify(msg, null, 2));
+  if (process.env.NODE_ENV !== "test") {
+    console.log(msg);
+  }
 }
