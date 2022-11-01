@@ -7,8 +7,8 @@ and keeps them in sync. It runs on node.js and uses the
 # Usage
 
 To use integrations, you need to create a new application from the
-[applications menu](https://developer.todoist.com/appconsole.html) in Todoist. 
-Set the OAuth redirect URL to http://localhost:3000. Next, you can use the
+[applications menu](https://developer.todoist.com/appconsole.html) in Todoist.
+Set the OAuth redirect URL to http://localhost:3232. Next, you can use the
 script in `scripts/o-auth.js` to retrieve an o-auth url which will guide you
 through the OAuth process and output todoist credentials for integrations.
 

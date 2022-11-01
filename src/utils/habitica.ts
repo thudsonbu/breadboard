@@ -28,7 +28,7 @@ export async function createTask(
   const res = await getClient().post("/tasks/user", {
     text,
     type,
-    priority: this.difficultyToPriority(difficulty),
+    priority: difficultyToPriority(difficulty),
   });
 
   return res.data;
@@ -54,11 +54,11 @@ export async function completeTask(taskId: string): Promise<any> {
 export async function relayItem(text: string, difficulty: string) {
   const create = await createTask(text, "todo", difficulty);
 
-  const update = await completeTask(create.data.data._id);
+  const update = await completeTask(create.data._id);
 
   return {
-    _id: create.data.data._id,
-    data: update.data.data,
+    _id: create.data._id,
+    data: update.data,
   };
 }
 
