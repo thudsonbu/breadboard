@@ -11,7 +11,9 @@
     "coverage": "nyc npm run test",
     "dev:tsc": "tsc --watch -p .",
     "dev:serve": "nodemon -e js -w lib lib/index.js",
-    "dev": "run-p dev:*"
+    "dev": "run-p dev:*",
+    "o-auth": "node ./scripts/o-auth.js",
+    "setup-webhooks": "ts-node ./scripts/setup-webhooks.ts"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,6 @@
-# Integrations
+# Breadboard
 
-Integrations is a micro service that receives webhooks from Todoist and Habitica
+Breadboard is a micro service that receives webhooks from Todoist and Habitica
 and keeps them in sync. It runs on node.js and uses the
 [hapi](https://hapi.dev/) backend framework.
 
@@ -9,7 +9,7 @@ and keeps them in sync. It runs on node.js and uses the
 To use integrations, you need to create a new application from the
 [applications menu](https://developer.todoist.com/appconsole.html) in Todoist.
 Set the OAuth redirect URL to http://localhost:3232. Next, you can use the
-script in `scripts/o-auth.js` to retrieve an o-auth url which will guide you
+script in `npm run o-auth` to retrieve an o-auth url which will guide you
 through the OAuth process and output todoist credentials for integrations.
 
 Now that you have the `code` and `state` you can add them to the
@@ -33,4 +33,9 @@ export default {
 };
 ```
 
-With those files in place, integrations is ready to be built and deployed.
+Habitica doesn't allow apps to be configured in an integrations console like
+Todoist. Instead, you need to hit their api to create them. You can use
+`npm run setup-webhooks` to a run a script that will guide you through that
+process.
+
+With those files in place, Breadboard is ready to be built and deployed.

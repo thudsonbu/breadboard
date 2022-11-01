@@ -8,7 +8,7 @@ export default [
     handler(request: Request, h) {
       log("received habitica webhook");
 
-      return h.response("hello world");
+      return h.response().code(200);
     },
   },
 ];
