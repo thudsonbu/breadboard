@@ -9,8 +9,9 @@ and keeps them in sync. It runs on node.js and uses the
 To use integrations, you need to create a new application from the
 [applications menu](https://developer.todoist.com/appconsole.html) in Todoist.
 Set the OAuth redirect URL to http://localhost:3232. Next, you can use the
-script in `npm run o-auth` to retrieve an o-auth url which will guide you
-through the OAuth process and output todoist credentials for integrations.
+command `npm run o-auth` to retrieve an o-auth url which will guide you
+through the OAuth process and output todoist credentials for integrations. (You
+might need to clear your cookies before this).
 
 Now that you have the `code` and `state` you can add them to the
 `todoist_config.ts` file in `src/private` along with a rest api token like this:
