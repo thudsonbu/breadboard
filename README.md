@@ -35,3 +35,7 @@ Todoist. Instead, you need to hit their api to create them. You can use
 run a script that will guide you through that process.
 
 With those files in place, Breadboard is ready to be built and deployed.
+
+# Development
+
+[Kanban](https://www.notion.so/thomashudsonnotes/7decf642e29a4b0c85f68ab67590bd4f?v=858a547724424c4fb24c1926845db39a)
