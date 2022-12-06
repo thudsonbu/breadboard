@@ -1,6 +1,6 @@
 import { assert } from "chai";
 import nock from "nock";
-import config from "../../../src/private/todoist_config";
+import config from "../../../src/configs/todoist_config";
 import { getClient } from "../../../src/clients/todoist";
 
 describe("src/clients/todoist", () => {

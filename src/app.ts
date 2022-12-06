@@ -1,6 +1,6 @@
 import { Server } from "@hapi/hapi";
 import resources from "./resources";
-import log from "./utils/log";
+import log from "./utils/log-adapter";
 
 export let server: Server;
 

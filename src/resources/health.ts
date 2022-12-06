@@ -1,4 +1,4 @@
-import log from "../utils/log";
+import log from "../utils/log-adapter";
 import { Request } from "@hapi/hapi";
 
 export default [

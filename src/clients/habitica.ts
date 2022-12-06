@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Axios } from "axios";
-import config from "../private/habitica_config";
+import config from "../configs/habitica_config";
 
 // Cached client instance.
 let client: Axios;
