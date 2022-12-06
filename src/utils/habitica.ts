@@ -1,5 +1,5 @@
 import { getClient } from "../clients/habitica";
-import log from "./log";
+import log from "./log-adapter";
 
 /**
  * Get profile information
@@ -54,7 +54,7 @@ export async function completeTask(taskId: string): Promise<any> {
 export async function relayItem(text: string, difficulty: string) {
   const create = await createTask(text, "todo", difficulty);
 
-  const update = await completeTask(create.data._id);
+  const update = await completeTask(create.data.id);
 
   return {
     _id: create.data._id,

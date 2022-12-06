@@ -1,6 +1,7 @@
 .vscode
+.DS_STORE
+.nyc_output
 node_modules
 private
 coverage
-.nyc_output
 lib

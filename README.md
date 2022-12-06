@@ -31,7 +31,7 @@ HABITICA_API_KEY="api_token",
 
 Habitica doesn't allow apps to be configured in an integrations console like
 Todoist. Instead, you need to hit their api to create them. You can use
-`npm run setup-webhooks` to a run a script that will guide you through that
-process.
+`npm run setup-webhooks` with the habitica environmental variables added to a
+run a script that will guide you through that process.
 
 With those files in place, Breadboard is ready to be built and deployed.

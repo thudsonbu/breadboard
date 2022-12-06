@@ -1,4 +1,4 @@
-import log from "../utils/log";
+import log from "../utils/log-adapter";
 import { relayItem } from "../utils/habitica";
 
 type TodoistTaskLabel = {

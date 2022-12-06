@@ -1,4 +1,4 @@
-import log from "./log";
+import log from "./log-adapter";
 import { getClient } from "../clients/todoist";
 
 /**
