@@ -1,6 +1,6 @@
 import { assert } from "chai";
 import nock from "nock";
-import config from "../../../src/private/habitica_config";
+import config from "../../../src/configs/habitica_config";
 import { getClient } from "../../../src/clients/habitica";
 
 describe("src/clients/habitica", () => {

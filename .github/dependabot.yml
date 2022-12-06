@@ -7,17 +7,3 @@ updates:
       day: "saturday"
     assignees:
       - "thudsonbu"
-  - package-ecosystem: "npm"
-    directory: "/www"
-    schedule:
-      interval: "weekly"
-      day: "saturday"
-    assignees:
-      - "thudsonbu"
-  - package-ecosystem: "npm"
-    directory: "/api"
-    schedule:
-      interval: "weekly"
-      day: "saturday"
-    assignees:
-      - "thudsonbu"

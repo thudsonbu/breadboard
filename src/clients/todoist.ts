@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Axios } from "axios";
-import config from "../private/todoist_config";
+import config from "../configs/todoist_config";
 
 // Cached client instance
 let client: Axios;

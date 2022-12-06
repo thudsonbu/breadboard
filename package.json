@@ -9,6 +9,7 @@
     "nyc": "nyc npm run mocha",
     "test": "NODE_ENV=test mocha -r ts-node/register test/tests/*test.ts test/tests/**/*test.ts ",
     "coverage": "nyc npm run test",
+    "compile": "tsc -p .",
     "dev:tsc": "tsc --watch -p .",
     "dev:serve": "nodemon -e js -w lib lib/index.js",
     "dev": "run-p dev:*",
