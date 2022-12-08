@@ -1,9 +1,9 @@
-type TodoistTaskLabel = {
+export type TodoistTaskLabel = {
   id: number;
   name: string;
 };
 
-type TodoistWebhook = {
+export type TodoistWebhook = {
   event_name: string;
   event_data: {
     content: string;
@@ -11,14 +11,14 @@ type TodoistWebhook = {
   };
 };
 
-type TodoistDifficulty = "trivial" | "easy" | "medium" | "hard";
+export type TodoistDifficulty = "trivial" | "easy" | "medium" | "hard";
 
-type HabiticaTaskType = "todo" | "habit" | "daily" | "reward";
-type HabiticaPriority = 0.1 | 1 | 1.5 | 2;
-type HabiticaWebookType = "scored" | "created" | "updated" | "deleted";
+export type HabiticaTaskType = "todo" | "habit" | "daily" | "reward";
+export type HabiticaPriority = 0.1 | 1 | 1.5 | 2;
+export type HabiticaWebhookType = "scored" | "created" | "updated" | "deleted";
 
-type HabiticaWebhook = {
-  type: HabiticaWebookType;
+export type HabiticaWebhook = {
+  type: HabiticaWebhookType;
   task: {
     id: string;
     type: HabiticaTaskType;

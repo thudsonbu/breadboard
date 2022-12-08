@@ -1,4 +1,9 @@
 import { ObjectId } from "mongodb";
+import {
+  HabiticaTaskType,
+  TodoistDifficulty,
+  HabiticaPriority,
+} from "../global";
 
 export default class Task {
   constructor(

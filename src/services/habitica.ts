@@ -2,6 +2,9 @@ import log from "../utils/log-adapter";
 import axios from "axios";
 import { Axios } from "axios";
 import config from "../configs/habitica_config";
+import { HabiticaTaskType } from "../global";
+import { TodoistDifficulty } from "../global";
+import { HabiticaPriority } from "../global";
 
 // Cached client instance.
 let client: Axios;

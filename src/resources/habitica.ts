@@ -1,5 +1,6 @@
 import log from "../utils/log-adapter";
 import { Request } from "@hapi/hapi";
+import { HabiticaWebhook } from "../global";
 
 type HabiticaWebhookRequest = Request & {
   payload: HabiticaWebhook;
