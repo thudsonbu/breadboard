@@ -1,4 +1,4 @@
-import { getClient } from "../src/clients/habitica";
+import { getClient } from "../src/services/habitica";
 import ConsoleIO from "./consoleIO";
 
 async function setupHabiticaWebhooks() {

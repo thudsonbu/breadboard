@@ -1,5 +1,29 @@
-import { getClient } from "../clients/habitica";
-import log from "./log-adapter";
+import log from "../utils/log-adapter";
+import axios from "axios";
+import { Axios } from "axios";
+import config from "../configs/habitica_config";
+
+// Cached client instance.
+let client: Axios;
+
+/**
+ * Memoized create function for an axios based habitica client
+ */
+export function getClient() {
+  if (client) {
+    return client;
+  }
+
+  client = axios.create({
+    baseURL: "https://habitica.com/api/v3",
+    headers: {
+      "x-api-user": config.USER_ID,
+      "x-api-key": config.API_KEY,
+    },
+  });
+
+  return client;
+}
 
 /**
  * Get profile information
@@ -20,8 +44,8 @@ export async function getProfile() {
  */
 export async function createTask(
   text: string,
-  type: string,
-  difficulty: string
+  type: HabiticaTaskType,
+  difficulty: TodoistDifficulty
 ) {
   log("createTask called with: " + JSON.stringify({ text, type }));
 
@@ -51,7 +75,7 @@ export async function completeTask(taskId: string): Promise<any> {
  * @param args.text - todo text
  * @param args.difficulty - todo difficulty
  */
-export async function relayItem(text: string, difficulty: string) {
+export async function relayItem(text: string, difficulty: TodoistDifficulty) {
   const create = await createTask(text, "todo", difficulty);
 
   const update = await completeTask(create.data.id);
@@ -67,7 +91,9 @@ export async function relayItem(text: string, difficulty: string) {
  * @param difficulty - difficulty [ trivial, easy, medium, hard ]
  * @return corresponding priority value
  */
-export function difficultyToPriority(difficulty: string): number {
+export function difficultyToPriority(
+  difficulty: TodoistDifficulty
+): HabiticaPriority {
   const map = {
     trivial: 0.1,
     easy: 1,
@@ -75,5 +101,5 @@ export function difficultyToPriority(difficulty: string): number {
     hard: 2,
   };
 
-  return map[difficulty];
+  return map[difficulty] as HabiticaPriority;
 }

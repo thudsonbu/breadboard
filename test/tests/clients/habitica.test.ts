@@ -1,7 +1,7 @@
 import { assert } from "chai";
 import nock from "nock";
 import config from "../../../src/configs/habitica_config";
-import { getClient } from "../../../src/clients/habitica";
+import { getClient } from "../../../src/services/habitica";
 
 describe("src/clients/habitica", () => {
   beforeEach(nock.cleanAll);

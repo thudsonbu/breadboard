@@ -1,3 +1,4 @@
+import log from "../utils/log-adapter";
 import axios from "axios";
 import { Axios } from "axios";
 import config from "../configs/todoist_config";
@@ -23,6 +24,16 @@ export function getClient() {
   return client;
 }
 
-export default {
-  getClient,
-};
+/**
+ * Get user's projects
+ * @returns list of projects
+ */
+export async function getProjects(): Promise<Object[]> {
+  log("called getProjects");
+
+  const client = getClient();
+
+  const res = await client.get("/projects");
+
+  return res.data;
+}
