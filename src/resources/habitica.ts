@@ -1,11 +1,15 @@
 import log from "../utils/log-adapter";
 import { Request } from "@hapi/hapi";
 
+type HabiticaWebhookRequest = Request & {
+  payload: HabiticaWebhook;
+};
+
 export default [
   {
     method: "POST",
     path: "/habitica/webhook",
-    handler(request: Request, h) {
+    handler(request: HabiticaWebhookRequest, h) {
       log("received habitica webhook");
 
       console.log(request.payload);

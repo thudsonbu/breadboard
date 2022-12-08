@@ -5,9 +5,9 @@
   "main": "lib/index.js",
   "type": "commonjs",
   "scripts": {
-    "start": "NODE_DEBUG=info node index.js",
+    "start": "NODE_DEBUG=info node lib/index.js",
     "nyc": "nyc npm run mocha",
-    "test": "NODE_ENV=test mocha -r ts-node/register test/tests/*test.ts test/tests/**/*test.ts ",
+    "test": "NODE_ENV=test mocha -r ts-node/register test/tests/*test.ts test/tests/**/*test.ts",
     "coverage": "nyc npm run test",
     "compile": "tsc -p .",
     "dev:tsc": "tsc --watch -p .",
@@ -40,7 +40,8 @@
   "homepage": "https://github.com/thudsonbu/integrations#readme",
   "dependencies": {
     "@hapi/hapi": "^21.0.0",
-    "axios": "^1.2.1"
+    "axios": "^1.2.1",
+    "mongodb": "^4.12.1"
   },
   "devDependencies": {
     "@types/chai": "^4.3.4",

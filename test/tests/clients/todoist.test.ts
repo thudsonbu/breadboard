@@ -1,7 +1,7 @@
 import { assert } from "chai";
 import nock from "nock";
 import config from "../../../src/configs/todoist_config";
-import { getClient } from "../../../src/clients/todoist";
+import { getClient } from "../../../src/services/todoist";
 
 describe("src/clients/todoist", () => {
   beforeEach(nock.cleanAll);
