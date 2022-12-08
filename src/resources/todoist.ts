@@ -1,6 +1,7 @@
 import log from "../utils/log-adapter";
 import { relayItem } from "../services/habitica";
 import { Request } from "@hapi/hapi";
+import { TodoistWebhook, TodoistDifficulty } from "../global";
 
 type TodoistWebhookRequest = Request & {
   payload: TodoistWebhook;
