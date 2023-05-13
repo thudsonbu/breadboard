@@ -41,7 +41,7 @@
   "dependencies": {
     "@hapi/hapi": "^21.0.0",
     "axios": "^1.2.1",
-    "mongodb": "^4.12.1"
+    "mongodb": "^5.5.0"
   },
   "devDependencies": {
     "@types/chai": "^4.3.4",
