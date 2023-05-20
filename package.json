@@ -39,14 +39,14 @@
   },
   "homepage": "https://github.com/thudsonbu/integrations#readme",
   "dependencies": {
-    "@hapi/hapi": "^21.0.0",
+    "@hapi/hapi": "^21.3.2",
     "axios": "^1.2.1",
     "mongodb": "^5.5.0"
   },
   "devDependencies": {
     "@types/chai": "^4.3.4",
     "@types/hapi": "^18.0.7",
-    "@types/hapi__hapi": "^20.0.13",
+    "@types/hapi__hapi": "^21.0.0",
     "@types/mocha": "^10.0.0",
     "@types/node": "^18.15.0",
     "@types/rewire": "^2.5.28",
